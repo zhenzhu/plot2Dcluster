@@ -31,7 +31,7 @@ Copyright (c) 2016 Zhen Zhu
 """
 
 import matplotlib.pyplot as plt
-from matplotlib import import colors
+from matplotlib import colors
 import random as rd
 import numpy as np
 import colorsys as cs
