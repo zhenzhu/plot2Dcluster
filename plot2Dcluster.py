@@ -197,7 +197,10 @@ def plot_com_order1(com_data,rownames,colnames,row=True):
     ax.set_xticklabels(colnames)
     ax.set_yticklabels(rownames)
     
-    plt.savefig('order1.png')
+    if (row==True):
+        plt.savefig('order1'+'_row.png')
+    else:
+        plt.savefig('order1'+'_col.png')
 
 
 def plot_com_order2(com_data,rownames,colnames):
