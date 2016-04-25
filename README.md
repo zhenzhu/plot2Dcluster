@@ -50,7 +50,7 @@ Copyright (c) 2016 Zhen Zhu
 <br>
 
 # Usage
-[[back to top](#plot2Dcluster)]
+[[back to top](#plot2dcluster)]
 
 ## Context
 Sometimes it is useful to visualize the community detection result with 
@@ -120,7 +120,7 @@ denoted as non-negative integers.
 <br>
 
 # Testing
-[[back to top](#plot2Dcluster)]
+[[back to top](#plot2dcluster)]
 
 
 ```python
@@ -196,7 +196,7 @@ and [order2](https://github.com/zhenzhu/plot2Dcluster/blob/master/examples/order
 <br>
 
 # Reference
-[[back to top](#plot2Dcluster)]
+[[back to top](#plot2dcluster)]
 
 If using the code, please cite the publication below:
 
@@ -205,6 +205,6 @@ Cerina F, Zhu Z, Chessa A, Riccaboni M (2015)
 PLoS ONE 10(7): e0134025. doi:10.1371/journal.pone.0134025
 
 # Acknowledgements
-[[back to top](#plot2Dcluster)]
+[[back to top](#plot2dcluster)]
 
 The code is inspired by the figures produced by Federica Cerina in [World Input-Output Network](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0134025).
