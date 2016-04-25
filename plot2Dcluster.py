@@ -8,7 +8,7 @@ This Python module visualizes community detection results with the
 interaction between 2 nominal node attributes. 
 
 In the raw data, the 2 attributes are arranged by rows and columns and the 
-communities are denoted by positive integers. 
+communities are denoted by non-negative integers. 
 
 Every community will be assigned with a "distinct" enough color (using the 
 HLS-to-RGB conversion). 

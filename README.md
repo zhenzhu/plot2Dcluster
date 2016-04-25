@@ -11,14 +11,15 @@ HLS-to-RGB conversion).
 
 The rows and columns can be kept as original or rearranged by a majority
 rule, which includes the following steps:
-    1. A ranking list of the frequencies of all the communities in the raw
-    data is generated. 
-    2. The majority (most frequent) communities for each row (or column) 
-    are recorded.
-    3. The rows (or columns) with their majority community ranking highest
-    in the list of step 1 will be rearranged first from the top (or from the
-    left for columns). 
-    4. When there are multiple rows (or columns) with their majority
+
+1. A ranking list of the frequencies of all the communities in the raw 
+data is generated. 
+2. The majority (most frequent) communities for each row (or column) are 
+recorded.
+3. The rows (or columns) with their majority community ranking highest 
+in the list of step 1 will be rearranged first from the top (or from the 
+left for columns). 
+4. When there are multiple rows (or columns) with their majority
     community ranking the same in the list of step 1, the one will the 
 	highest
     frequency will be rearranged first. 
