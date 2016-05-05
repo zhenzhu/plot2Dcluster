@@ -160,6 +160,7 @@ def example_com(n_row,n_col,n_com):
 
 # Generate an example community array with 40 rows, 26 columns, and 30 communities.
 rd.seed(3)
+np.random.seed(3)
 example = example_com(40,26,30)
 
 # Generate an example list of column names A-Z.
