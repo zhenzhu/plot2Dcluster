@@ -126,7 +126,7 @@ def plot_com_order1(com_data,rownames,colnames,row=True):
         unreach = set(range(n_row))
         row_order = [] # The list of new order of the rows.
         
-        for i in range(len(all_order)):
+        for i in all_order:
             if len(majority[i])>0:
                 temp1 = majority[i]
                 temp2 = sorted(temp1.items(), key=operator.itemgetter(1), reverse=True)
@@ -150,7 +150,7 @@ def plot_com_order1(com_data,rownames,colnames,row=True):
         unreach = set(range(n_col))
         col_order = [] # The list of new order of the columns.
         
-        for i in range(len(all_order)):
+        for i in all_order:
             if len(majority[i])>0:
                 temp1 = majority[i]
                 temp2 = sorted(temp1.items(), key=operator.itemgetter(1), reverse=True)
@@ -237,7 +237,7 @@ def plot_com_order2(com_data,rownames,colnames):
     unreach = set(range(n_row))
     row_order = [] # The list of new order of the rows.
         
-    for i in range(len(all_order)):
+    for i in all_order:
         if len(majority_row[i])>0:
             temp1 = majority_row[i]
             temp2 = sorted(temp1.items(), key=operator.itemgetter(1), reverse=True)
@@ -265,7 +265,7 @@ def plot_com_order2(com_data,rownames,colnames):
     unreach = set(range(n_col))
     col_order = [] # The list of new order of the columns.
         
-    for i in range(len(all_order)):
+    for i in all_order:
         if len(majority_col[i])>0:
             temp1 = majority_col[i]
             temp2 = sorted(temp1.items(), key=operator.itemgetter(1), reverse=True)
