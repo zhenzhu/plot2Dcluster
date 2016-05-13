@@ -71,19 +71,18 @@ def plot_com_original(com_data,rownames,colnames):
     
     # Prepare the discrete colormap for each integer/community.
     cmap = colors.ListedColormap(RGB_color)
-    bounds = [i-0.5 for i in range(n_com+1)]
-    norm = colors.BoundaryNorm(bounds, cmap.N)
     
     # Prepare the plot.
     fig, ax = plt.subplots(figsize=(16,16))
-    xticks = np.arange(0,n_col,1)
-    yticks = np.arange(0,n_row,1)
-    ax.imshow(com_data, cmap=cmap, norm=norm, interpolation='nearest')
+    xticks = np.arange(0,n_col,1)+0.5
+    yticks = np.arange(0,n_row,1)+0.5
+    ax.set_xticks(xticks, minor=False)
+    ax.set_yticks(yticks, minor=False)
+    ax.pcolor(com_data, cmap=cmap, alpha=0.8, edgecolors='white', linewidths=1)
+    ax.invert_yaxis() # This will make the rows start from the top. 
     ax.xaxis.tick_top() # This will make x labels on top.
-    plt.xticks(xticks)
-    plt.yticks(yticks)
-    ax.set_xticklabels(colnames)
-    ax.set_yticklabels(rownames)
+    ax.set_xticklabels(colnames, minor=False)
+    ax.set_yticklabels(rownames, minor=False)
     
     plt.savefig('original.png')
 
@@ -174,28 +173,27 @@ def plot_com_order1(com_data,rownames,colnames,row=True):
         i += 1
         init += step
     RGB_color = [cs.hls_to_rgb(a,b,c) for (a,b,c) in HLS_color]
-    
+
     # Prepare the discrete colormap for each integer/community.
     cmap = colors.ListedColormap(RGB_color)
-    bounds = [i-0.5 for i in range(n_com+1)]
-    norm = colors.BoundaryNorm(bounds, cmap.N)
-    
+
     # Reorder the row names or the column names depending on the logical value of row.
     if (row==True):
         rownames = [rownames[i] for i in row_order]
     else:
         colnames = [colnames[i] for i in col_order]
-    
+     
     # Prepare the plot.
     fig, ax = plt.subplots(figsize=(16,16))
-    xticks = np.arange(0,n_col,1)
-    yticks = np.arange(0,n_row,1)
-    ax.imshow(new_data, cmap=cmap, norm=norm, interpolation='nearest')
+    xticks = np.arange(0,n_col,1)+0.5
+    yticks = np.arange(0,n_row,1)+0.5
+    ax.set_xticks(xticks, minor=False)
+    ax.set_yticks(yticks, minor=False)
+    ax.pcolor(new_data, cmap=cmap, alpha=0.8, edgecolors='white', linewidths=1)
+    ax.invert_yaxis() # This will make the rows start from the top. 
     ax.xaxis.tick_top() # This will make x labels on top.
-    plt.xticks(xticks)
-    plt.yticks(yticks)
-    ax.set_xticklabels(colnames)
-    ax.set_yticklabels(rownames)
+    ax.set_xticklabels(colnames, minor=False)
+    ax.set_yticklabels(rownames, minor=False)
     
     if (row==True):
         plt.savefig('order1'+'_row.png')
@@ -292,8 +290,6 @@ def plot_com_order2(com_data,rownames,colnames):
     
     # Prepare the discrete colormap for each integer/community.
     cmap = colors.ListedColormap(RGB_color)
-    bounds = [i-0.5 for i in range(n_com+1)]
-    norm = colors.BoundaryNorm(bounds, cmap.N)
     
     # Reorder the row names and the column names.
     rownames = [rownames[i] for i in row_order]
@@ -301,14 +297,15 @@ def plot_com_order2(com_data,rownames,colnames):
     
     # Prepare the plot.
     fig, ax = plt.subplots(figsize=(16,16))
-    xticks = np.arange(0,n_col,1)
-    yticks = np.arange(0,n_row,1)
-    ax.imshow(new_data2, cmap=cmap, norm=norm, interpolation='nearest')
+    xticks = np.arange(0,n_col,1)+0.5
+    yticks = np.arange(0,n_row,1)+0.5
+    ax.set_xticks(xticks, minor=False)
+    ax.set_yticks(yticks, minor=False)
+    ax.pcolor(new_data2, cmap=cmap, alpha=0.8, edgecolors='white', linewidths=1)
+    ax.invert_yaxis() # This will make the rows start from the top. 
     ax.xaxis.tick_top() # This will make x labels on top.
-    plt.xticks(xticks)
-    plt.yticks(yticks)
-    ax.set_xticklabels(colnames)
-    ax.set_yticklabels(rownames)
+    ax.set_xticklabels(colnames, minor=False)
+    ax.set_yticklabels(rownames, minor=False)
     
     plt.savefig('order2.png')
 
